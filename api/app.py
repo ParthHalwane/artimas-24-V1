@@ -51,7 +51,7 @@ def register_user(name, email, password, verification_token):
     }
     user_id = db.users.insert_one(new_user).inserted_id
 
-    verification_link = f'https://2560-103-82-43-62.ngrok-free.app/verify/{verification_token}'
+    verification_link = f'https://artimas-24-v1.vercel.app/verify/{verification_token}'
     subject = 'Email Verification for Registration'
     body = render_template('email_verification.html', user=new_user, verification_link=verification_link)
     send_email(subject, new_user['email'],body)
