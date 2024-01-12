@@ -124,13 +124,13 @@
                         var messageText = $('.message').text();
 
                         if (messageType === 'success') {
-                            swal("Success", messageText, "success");
+                            sweetAlert("Success", messageText, "success");
                         }
                         else if (messageType === 'warning') {
-                            swal("Error", messageText, "warning");
+                            sweetAlert("Error", messageText, "warning");
                         }
                         else if (messageType === 'error') {
-                            swal("Error", messageText, "error");
+                            sweetAlert("Error", messageText, "error");
                         }
                     }
                 });
